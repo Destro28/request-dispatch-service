@@ -13,7 +13,8 @@ def test_home(client):
     """Test the home page."""
     res = client.get('/')
     assert res.status_code == 200
-    assert b"Request-Dispatch-Service is running!" in res.data
+    # assert b"Request-Dispatch-Service is running!" in res.data
+    assert b"Welcome to the Request Dispatch Service!" in res.data
 
 def test_health_check(client):
     """Test the health check endpoint."""
